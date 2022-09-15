@@ -1,0 +1,13 @@
+app:
+  name: 'statistics-service'
+  version: '1.0.0'
+
+http:
+    port: 8913
+
+logger:
+  log_level: 'info'
+
+postgres:
+  pool_max: 2
+  url: 'postgres://postgres:postgres@localhost:5432/database'
