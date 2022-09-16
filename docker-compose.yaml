@@ -16,6 +16,8 @@ services:
   app:
     container_name: app
     build: .
+    volumes:
+      - ./logs:/logs
     env_file:
       - .env
     ports:

@@ -16,5 +16,7 @@ func SetLogrus(level string) {
 	logrus.SetFormatter(&logrus.JSONFormatter{
 		TimestampFormat: "2006-01-02 15:04:05",
 	})
-	logrus.SetOutput(os.Stdout)
+
+	file, err := os.OpenFile("/logs/app.log", os.O_APPEND|os.O_CREATE|os.O_RDWR, 0666)
+	logrus.SetOutput(file)
 }
